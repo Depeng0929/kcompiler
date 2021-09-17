@@ -7,7 +7,6 @@ export function compiler (input) {
   let tokens = tokenizer(input)
   let ast = parse(tokens)
   let newAst = transformer(ast)
-  console.log(ast)
-  debugger
+  console.log(newAst)
   return codeGenerator(newAst)
 }
